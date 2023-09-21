@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">1
+        {% csrf_token %}
+        {{form.as_div}}
+        <input type="submit" value="Submit">
+    </form>
+    <p>
+        {% for k, v in values.items %}
+        {{v.value}}<br>
+        {% endfor %}
+    </p>
+</body>
+</html>

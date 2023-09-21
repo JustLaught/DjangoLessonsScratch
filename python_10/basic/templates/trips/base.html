@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-bttn{
+            height: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            width: 85%;
+            background-color: teal;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>       
+    {% block left_menu %}No left menu template{% endblock %}
+    <div style="margin-left: 20%;">
+        {% block right_menu %}No right menu template{% endblock %}
+        <div>
+            {% include "trips/content.html" %}
+        </div>
+    </div>
+</body>
+</html>

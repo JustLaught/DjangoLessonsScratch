@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test app</title>
+</head>
+<body style="text-align: center;">
+    <h1>Test app</h1>
+    <b>User name: {{ name }}</b><br>
+    <b>User age: {{ age }}</b><br>
+    <b>User email: {{ email }}</b>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="new_name">User name</label>
+        <input type="text" name="new_name" id="new_name"><br>
+        <label for="new_email">Email</label>
+        <input type="email" name="new_email" id="new_email"><br>
+        <label for="new_age">Age</label>
+        <input type="text" name="new_age" id="new_age"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

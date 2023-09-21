@@ -1,0 +1,21 @@
+.header{
+    text-align: center;
+    background-color: slategray;
+}
+.navigation{
+    float: left;
+    width: 200px;
+    background-color: lightgoldenrodyellow;
+}
+.content{
+    margin-left: 220px;
+    margin-bottom: 20px;
+    background-color: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer{
+    text-align: center;
+    background-color: slategray;
+    height: 25px;
+}

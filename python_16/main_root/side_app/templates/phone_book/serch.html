@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block navigation %}
+    {% include 'phone_book/nav.html' %}
+{% endblock navigation %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name_serch">Name:</label>
+        <input type="text" name="name_serch" id="name_serch">
+        {% comment %} <label for="lastname_serch">LastName:</label>
+        <input type="text" name="lastname_serch" id="lastname_serch"> {% endcomment %}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}

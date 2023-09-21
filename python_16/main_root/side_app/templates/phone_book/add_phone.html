@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block navigation %}
+    {% include 'phone_book/nav.html' %}
+{% endblock navigation %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Send form">
+    </form>
+{% endblock content %}

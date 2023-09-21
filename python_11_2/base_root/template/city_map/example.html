@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header, .footer{
+            width: 90%;
+            height: 40px;
+            margin-top: 25px;
+            margin-left: 5%;
+            margin-bottom: 25px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: #008F7A;
+        }
+        .left-menu{ 
+            width: 20%;
+            height: 600px;
+            margin-left: 5%;
+            margin-right: 5%;
+            float: left;
+            border: 2px solid black;
+            background-color: #0081CF;
+            border-radius: 20px;
+        }
+        .content{
+            margin-left: 30%;
+            width: 65%;
+            height: 600px;
+            border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            border-radius: 20px;
+            background-color: #0081CF;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="text-align: center; padding-top: 10px; font-size: large;"><b>Some shit about Vinniki! ❤️💩</b></div>
+    <div class="left-menu">
+        {% include "city_map/nav-menu.html" %}
+    </div> 
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer" style="text-align: center; padding-top: 10px; font-size: large;"><b>Some stupid things :3 !! ❤️💩</b></div>
+</body>
+</html>

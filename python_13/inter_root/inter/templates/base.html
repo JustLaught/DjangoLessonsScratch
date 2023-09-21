@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #leftsidebar{
+            text-align: center;
+            height: 300px;
+            background-color: #555;
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 15%; /* Adjust the width as needed */
+            float: left; /* Float the sidebar to the left */
+        }
+
+        #main{
+            height: 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20%; /* Match the width of the left sidebar */
+        }
+
+        #footer{
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            clear: both; /* Clear floats to prevent layout issues */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header"><h2>{% block title %}Header text{% endblock title %}</h2></header>
+        <aside id="leftsidebar">
+            <nav id="navmenu">
+                {% block navmenu %}{% endblock navmenu %}
+            </nav>
+        </aside>
+        <section id="main">
+            {% block content %}{% endblock content %}
+        </section>
+        <footer id="footer">Copyright &copy; 2023</footer>
+    </div>
+</body>
+</html>
