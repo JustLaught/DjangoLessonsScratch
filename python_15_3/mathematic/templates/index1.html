@@ -1,0 +1,18 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="number" name="first" id="first">
+        <input type="number" name="second" id="second">
+        <input type="number" name="third" id="third"><br>
+        MIN
+        <input type="radio" name="opt" value='min'><br>
+        MAX
+        <input type="radio" name="opt" value='max'><br>
+        SUM
+        <input type="radio" name="opt" value='sum'>
+        <br><hr>
+        <input type="submit" value="Send">
+    </form>
+{% endblock content %}

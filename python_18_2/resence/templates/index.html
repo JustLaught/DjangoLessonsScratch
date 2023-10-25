@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block nav_menu %}
+{% comment %} <li class="nav-item"><a href="" class="nav-link">Example name</a></li> {% endcomment %}
+<li class="nav-item"><a href="{% url "registerform" %}" class="nav-link">Register book rewiev</a></li>
+<li class="nav-item"><a href="{% url "sitereview" %}" class="nav-link">Register site rewiev</a></li>
+{% endblock nav_menu %}
+{% block center_content %}
+{% comment %} <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+<h1 class="display-5 fw-bold text-body-emphasis">Header of content</h1>
+<div class="col-lg-6 mx-auto">
+<p class="lead mb-4">Exacly content</p> 
+</div> {% endcomment %}
+{% endblock center_content %}

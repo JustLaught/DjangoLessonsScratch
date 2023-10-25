@@ -1,0 +1,14 @@
+{% extends "temp.html" %}
+
+{% block navi %}
+    {% include "nav_menu.html" %}
+{% endblock navi %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <br><hr>
+        <input type="submit" value="Send">
+    </form>
+{% endblock content %}

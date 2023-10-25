@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% for k, v in data.items %}
+        <p><a href="">{{k}}: {{v}}</a></p>
+    {% endfor %}
+{% endblock content %}

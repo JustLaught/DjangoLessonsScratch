@@ -1,0 +1,7 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    {% for element in data %}
+        <p><a href="{% url "region" element %}">{{element}}</a></p>
+    {% endfor %}
+{% endblock content %}

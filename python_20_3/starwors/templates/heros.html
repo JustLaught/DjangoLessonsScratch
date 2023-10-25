@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% for el in data %}
+        <p><a href="{% url "hero" el.name %}">{{el.name}}</a></p>
+    {% endfor %}
+{% endblock content %}

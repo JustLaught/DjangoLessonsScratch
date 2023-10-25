@@ -16,4 +16,6 @@ def show_readers(request):
     return render(request, 'readers.html', {'data': readers})
 
 def show_onhand(request, id):
-    pass
+    reader = Reader.objects.get(id=id)
+    books = reader.books.all()
+    return render(request, 'onhand.html', {'data': reader, 'books':books})

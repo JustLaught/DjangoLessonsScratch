@@ -1,0 +1,10 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    {% comment %} {% for element in data %}
+        {{element}}
+    {% endfor %} {% endcomment %}
+    <p>Country: {{data.name.common}}</p><p>Status: {% if data.tld.unMember == True %}Member of UN{%else%}Not member of UN{%endif%}</p>
+    <p>Currency: {% for k, v in data.currencies.items %}{{v.name}}{% endfor %}</p><p>Capital: {% for e in data.capital %}<a href="{% url "capital" e %}">{{e}}</a>{% endfor %}</p><p>Region: {{data.region}}</p>
+    <p>On map: <a href="{{data.maps.googleMaps}}">GoogleMaps</a></p>
+{% endblock content %}

@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
     {% for e in data %}
-        <p>{{e}}</p>
+        <p><a href="{% url "show_onhand" e.id %}">{{e}}</a></p>
     {% endfor %}
 </div>
 {% endblock content %}

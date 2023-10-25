@@ -22,4 +22,4 @@ class Reader(models.Model):
     visit_date = models.DateField(auto_now=False, auto_now_add=False)
 
     def __str__(self):
-        return f'{self.name} | {self.lastname} | {self.phone} | {self.email} | {self.visit_date}'
+        return f'{self.name} | {self.lastname} | {self.phone} | {self.email} | {self.visit_date} | {self.books}'

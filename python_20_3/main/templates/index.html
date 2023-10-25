@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .container {
+            margin: 50px auto;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+        }
+        
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    {% block header %}
+    <div class="container">
+        <h1>Welcome to the Star Wars Universe!</h1>
+        <img src="{% static 'starwars_logo.png' %}" alt="Star Wars Logo">
+        <p>May the Force be with you...</p>
+    </div>
+    {% endblock header %}
+    <a href="{% url "index" %}" style="color: yellow">HOME</a>
+    <a href="{% url "heros" %}" style="color: yellow">HEROS</a>
+    <a href="{% url "planets" %}" style="color: yellow">PLANETS</a>
+    <a href="{% url "ships" %}" style="color: yellow">SHIPS</a>
+    {% block content %}{% endblock content %}
+</body>
+</html>

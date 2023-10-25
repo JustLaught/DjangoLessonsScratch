@@ -1,0 +1,13 @@
+{% extends "temp.html" %}
+
+{% block navi %}
+    {% include "nav_menu.html" %}
+{% endblock navi %}
+
+{% block content %}
+    <div>
+        {% for el in data %}
+            <p><a href="{% url "showrestoran" el.id %}">{{el}}</a></p>
+        {% endfor %}
+    </div>
+{% endblock content %}

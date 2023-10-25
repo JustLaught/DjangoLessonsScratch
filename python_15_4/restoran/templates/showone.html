@@ -1,0 +1,19 @@
+{% extends "temp.html" %}
+
+{% block navi %}
+    {% include "nav_menu.html" %}
+{% endblock navi %}
+
+{% block content %}
+    <div>
+        {{data}}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <label for="delete">To delete use checkbox. Any changes wouldn`t apply</label>
+            <input type="checkbox" name="delete" id="">
+            <hr>
+            <input type="submit" value="Apply changes">
+        </form>
+    </div>
+{% endblock content %}

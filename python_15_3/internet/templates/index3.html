@@ -1,0 +1,10 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <br><hr>
+        <input type="submit" value="Send">
+    </form>
+{% endblock content %}

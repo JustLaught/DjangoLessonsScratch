@@ -1,0 +1,5 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    <h1>Hello {{name}} | {% if superuser == True %}Spider-Man{% else %}Typical Nobody{% endif %}</h1>
+{% endblock content %}

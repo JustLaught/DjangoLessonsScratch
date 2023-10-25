@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-menu {
+            background-color: #333; /* Background color for the navigation menu */
+            color: #fff; /* Text color for menu items */
+            padding: 10px; /* Add some padding for better readability */
+        }
+        
+        .nav-menu ul {
+            list-style-type: none; /* Remove bullet points from list */
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-menu li {
+            display: inline; /* Display menu items horizontally */
+            margin-right: 20px; /* Add spacing between menu items */
+        }
+        
+        .nav-menu a {
+            text-decoration: none; /* Remove underlines from links */
+            color: #fff; /* Text color for menu links */
+            font-weight: bold; /* Make menu links bold */
+        }
+        
+        .nav-menu a:hover {
+            color: #ff6600; /* Change text color on hover */
+        }
+        
+        /* Style for the container with class 'container' for displaying information */
+        .container {
+            background-color: #f5f5f5; /* Background color for the container */
+            padding: 20px; /* Add padding for content inside the container */
+            margin: 20px 0; /* Add spacing around the container */
+            border: 1px solid #ccc; /* Add a border to the container */
+            border-radius: 5px; /* Round the corners of the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+        }
+
+        form {
+            max-width: 95%; /* Set a maximum width for the form */
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Style form headings (if any) */
+        form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        /* Style form labels */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        /* Style form input fields */
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        /* Style form buttons */
+        form button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        /* Style form buttons on hover */
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Style form validation error messages (optional) */
+        form .error-message {
+            color: #ff0000;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class='nav-menu'>
+        {% block navi %}{% endblock navi %}
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>

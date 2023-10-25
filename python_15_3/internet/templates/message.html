@@ -1,0 +1,7 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    {% for k, v in data.items %}
+    {{k}}:  {{v}}<br>
+    {% endfor %}
+{% endblock content %}

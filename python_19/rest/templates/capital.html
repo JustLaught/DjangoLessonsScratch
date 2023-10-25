@@ -1,0 +1,9 @@
+{% extends "temp.html" %}
+
+{% block content %}
+    {% comment %} {% for element in data %}
+        <p><a href="{% url "country" element %}">{{element}}</a></p>
+    {% endfor %} {% endcomment %}
+    <p>Name: {{data.data.city}}</p>
+    <p>Country: {{data.data.country}}</p>
+{% endblock content %}
