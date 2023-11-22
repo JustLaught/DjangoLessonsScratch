@@ -55,7 +55,7 @@
 # address = "address is: Lviv.Vinniki"
 # age = 22
 # hobbi = "And i'm love Minecraft"
-# phoneNumb = "+380731662876"
+# phoneNumb = "+380731663333"
 # print("Hello my name is", name)
 # print(address)
 # print("My age is", age)
